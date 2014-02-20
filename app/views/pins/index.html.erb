@@ -3,18 +3,21 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Title of piece</th>
       <th>Brand</th>
       <th>Comment</th>
       <th>User</th>
       <th></th>
       <th></th>
+       <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
+        <td><%= image_tag pin.image.url(:medium) %></td>
         <td><%= pin.title_Of_Piece %></td>
         <td><%= pin.brand %></td>
         <td><%= pin.comment %></td>
