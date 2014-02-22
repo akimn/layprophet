@@ -1,29 +1,21 @@
 <%= render 'pages/home' unless user_signed_in? %>
+  
+   
+    <%= form_tag pins_path, :method => 'get' , :id => "pins_search" do %>
+      
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "SEARCH", :name => nil, class: "btn btn-default btn-xs" %>
+      </p>
 
-<div id="pins" class="transitions-enabled">
-
-    <% @pins.each do |pin| %>
-      <div class="box panel panel-default">
-        <%= link_to image_tag(pin.image.url(:medium)), pin %>
-        <div class="panel-body">
-        <%= pin.title_Of_Piece %>
-        <%= pin.brand %>
-        <%= pin.comment %></br>
-        <strong><%= pin.user.name if pin.user %></strong>
-        
-        <%= link_to 'Show', pin_path(pin) %>
-          <div class="actions">
-            <% if pin.user == current_user %>
-              <%= link_to 'Edit', edit_pin_path(pin) %>
-              <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-           </div>
-        <% end %>
-       
-        </div>
+        <%= sortable "created_at", "Sort by Date" %><br>
       </div>
-    <% end %>
-</div>
 
-<div class="center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+
+    <div id="pins">
+        <%= render 'pins' %>
+
 </div>
+  <% end %>
+
+
