@@ -3,6 +3,8 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+  helper_method :sort_column, :sort_direction
+
   def index
     @pins = Pin.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 35, :page => params[:page])
   end
