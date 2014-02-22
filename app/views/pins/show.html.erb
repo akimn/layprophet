@@ -9,27 +9,28 @@
 		<%= image_tag @pin.image.url(:medium) %>
 		<div class="panel-body">
 		<p>
-		  <strong>Title of Piece:</strong>
-		  <%= @pin.title_Of_Piece %>
+		  <h4><%= @pin.title_Of_Piece %></h4>
 		</p>
-	</br>
 
 		<p>
-		  <strong>Brand:</strong>
 		  <%= @pin.brand %>
 		</p>
-	</br>
 
 		<p>
-		  <strong>Comment:</strong>
 		  <%= @pin.comment %>
+		</p>
+	
+		<p><h5>
+			by <%= @pin.user.name if @pin.user %></h5>
+		</p>
+
+		<p>
+			<h6><%= @pin.created_at.strftime("%b %d, %Y") %></h6>
 		</p>
 	</br>
 
-		 <p><strong><%= @pin.user.name if @pin.user %></strong></p>
-
 		<% if @pin.user == current_user %>
-			<%= link_to 'Edit', edit_pin_path(@pin) %>
+			<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-xs" %>
 		<% end %>
 		</div>
 	</div>

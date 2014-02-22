@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   has_many :pins
 
   validates :name, presence: true
-  validates :name, uniqueness: true
+  validates :name, uniqueness: true #uniqueness? should we?
 end

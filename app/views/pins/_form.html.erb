@@ -1,3 +1,5 @@
+
+<div class="panel-heading">
 <%= form_for @pin, html: { multipart: true } do |f| %>
   <% if @pin.errors.any? %>
     <div id="error_explanation">
@@ -28,7 +30,10 @@
     <%= f.label :comment %>
     <%= f.text_field :comment, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  
+   <div class="actions">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+    <br><i> It takes a few moments to load, please wait <i>
+  <% end %>
+</div>
