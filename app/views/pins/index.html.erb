@@ -9,7 +9,7 @@
         <%= pin.title_Of_Piece %>
         <%= pin.brand %>
         <%= pin.comment %></br>
-        <strong><%= pin.user.email if pin.user %></strong>
+        <strong><%= pin.user.name if pin.user %></strong>
         
         <%= link_to 'Show', pin_path(pin) %>
           <div class="actions">
