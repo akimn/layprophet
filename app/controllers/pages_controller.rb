@@ -7,4 +7,10 @@ class PagesController < ApplicationController
 
   def pieces
   end
+
+  def cover
+  end
+
+  def article1
+  end
 end

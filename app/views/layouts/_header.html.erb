@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default" role="navigation">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -7,17 +8,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
 
       <%= link_to "JUELES MAYFLOWER", root_path, class: "navbar-brand" %>
-      <h5>write a review about some clothes, upload an art piece, or something interesting</h5> 
+      <!--<h5>write a review about some clothes, upload an art piece, or something interesting</h5>--> 
    </div>
        
 
     
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ART", pieces_path, class: "btn btn-primary" %></li>
+        <li><%= link_to "PIECES", pieces_path %></li>
+        <li><%= link_to "SOCIAL", index_path %></li>
+        <li><%= link_to "RANKINGS", rankings_path %></li>
         <li><%= link_to "ABOUT", about_path %></li>
         <%if user_signed_in? %>
             <li><%= link_to '+ADD', new_pin_path %></li>
@@ -29,13 +33,5 @@
 
       </ul>
     </div><!-- /.navbar-collapse -->
-
-        
-          <img src="http://i762.photobucket.com/albums/xx270/akimn89/JMT13_zpse866e8de.jpg"  style="max-width:100%" alt="The Mayflower" height="58" width="50"/>
-          <img src="http://i762.photobucket.com/albums/xx270/akimn89/JMT13_zpse866e8de.jpg"  style="max-width:100%" alt="The Mayflower" height="58" width="50"/>
-          <img src="http://i762.photobucket.com/albums/xx270/akimn89/JMT13_zpse866e8de.jpg"  style="max-width:100%" alt="The Mayflower" height="58" width="50"/>
-          <img src="http://i762.photobucket.com/albums/xx270/akimn89/JMT13_zpse866e8de.jpg"  style="max-width:100%" alt="The Mayflower" height="58" width="50"/><br><br>
   
-         
-    
   </nav>

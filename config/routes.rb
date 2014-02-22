@@ -2,9 +2,14 @@ Layprophet::Application.routes.draw do
   resources :pins
 
   devise_for :users
-  root "pins#index"
+  #root "pins#index"
+  root "pages#cover"
   get "about" => "pages#about" #create about_path
   get "pieces" => "pages#pieces"
+  #get "cover" => "pages#cover"
+  get "index" => "pins#index"
+  get "article1" => "pages#article1"
+  get "rankings" => "pages#rankings"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

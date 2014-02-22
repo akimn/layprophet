@@ -3,12 +3,14 @@
    
     <%= form_tag pins_path, :method => 'get' , :id => "pins_search" do %>
       
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "SEARCH", :name => nil, class: "btn btn-default btn-xs" %>
-      </p>
+      <div class="actions pull-right">
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "SEARCH", :name => nil, class: "btn btn-default btn-xs" %>
+        </p>
+     </div>
 
-        <%= sortable "created_at", "Sort by Date" %><br>
+        <%= sortable "created_at", "By Date" %><br>
       </div>
 
 
