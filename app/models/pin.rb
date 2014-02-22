@@ -8,8 +8,8 @@ class Pin < ActiveRecord::Base
 	validates :comment, presence: true
 
 	
-	validates :title_of_piece, length: { minimum: 1 }
- 	validates :title_of_piece, length: { maximum: 255 }
+	validates :title_Of_Piece, length: { minimum: 1 }
+ 	validates :title_Of_Piece, length: { maximum: 255 }
 	validates :brand, length: { minimum: 1 }
   	validates :brand, length: { maximum: 255 }
   	validates :comment, length: { minimum: 1 }
