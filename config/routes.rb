@@ -6,7 +6,7 @@ Layprophet::Application.routes.draw do
   root "pages#cover"
   get "about" => "pages#about" #create about_path
   get "pieces" => "pages#pieces"
-  #get "cover" => "pages#cover"
+  get "cover" => "pages#cover"
   get "index" => "pins#index"
   get "article1" => "pages#article1"
   get "rankings" => "pages#rankings"

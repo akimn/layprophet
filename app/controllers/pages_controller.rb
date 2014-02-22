@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def article1
   end
+
+  def rankings
+  end
 end
