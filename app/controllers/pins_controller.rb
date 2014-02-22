@@ -6,7 +6,8 @@ class PinsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @pins = Pin.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 35, :page => params[:page])
+    #@pins = Pin.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 35, :page => params[:page])
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 50)
   end
 
   def show
