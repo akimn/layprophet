@@ -3,13 +3,13 @@ class Pin < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
 	validates :image, presence: true
- 	#validates :title_Of_Piece, presence: true
+ 	validates :title_of_Piece, presence: true
  	validates :brand, presence: true
 	validates :comment, presence: true
 
 	
-	#validates :title_Of_Piece, length: { minimum: 1 }
- 	#validates :title_Of_Piece, length: { maximum: 255 }
+	validates :title_Of_Piece, length: { minimum: 1 }
+ 	validates :title_Of_Piece, length: { maximum: 255 }
 	validates :brand, length: { minimum: 1 }
   	validates :brand, length: { maximum: 255 }
   	validates :comment, length: { minimum: 1 }

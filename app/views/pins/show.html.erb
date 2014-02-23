@@ -4,33 +4,35 @@
 
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
-	<div class="panel panel-default">
-		<div class="panel-heading center">
-		<%= image_tag @pin.image.url() %>
-		<p>
-		  <h2><%= @pin.title_Of_Piece %></h2>
-		</p>
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+			<%= image_tag @pin.image.url() %>
+			<p>
+			  <h2><%= @pin.title_Of_Piece %></h2>
+			</p>
 
-		<p>
-		  <h4><%= @pin.brand %></h4>
-		</p>
+			<p>
+			  <h4><%= @pin.brand %></h4>
+			</p>
 
-		<p>
-		  <%= @pin.comment %>
-		</p>
-	
-		<p><h5>
-			by <%= @pin.user.name if @pin.user %></h5>
-		</p>
+			<p>
+			  <%= @pin.comment %>
+			</p>
+		
+			<p><h5>
+				by <%= @pin.user.name if @pin.user %></h5>
+			</p>
 
-		<p>
-			<h6><%= @pin.created_at.strftime("%b %d, %Y") %></h6>
-		</p>
-	</br>
+			<p>
+				<h6><%= @pin.created_at.strftime("%b %d, %Y") %></h6>
+			</p>
+		</br>
 
-		<% if @pin.user == current_user %>
-			<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-xs" %>
-		<% end %>
+			<% if @pin.user == current_user %>
+				<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-xs" %>
+		</div>	
+			<% end %>
 		</div>
 	</div>
+</div>
 </div>
