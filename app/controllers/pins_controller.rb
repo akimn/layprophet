@@ -71,7 +71,7 @@ class PinsController < ApplicationController
     end
 
     def sort_column
-      params[:sort] || "title_Of_Piece" || "brand" || "comment"
+      params[:sort] || "comment" || "brand" || "title_Of_Piece"
     end
   
     def sort_direction

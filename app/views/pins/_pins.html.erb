@@ -12,19 +12,19 @@
 
 
   <div class="panel panel-default">
-    <%= @pins.each do |pin| %>
+    <% @pins.each do |pin| %>
       <div class="box panel panel-default">
         <div class="actions center">
           <dl>
             <%= image_tag pin.image.url(:medium) %>
-            <dt><h3><%= link_to pin.title_Of_Piece, pin_path(pin) %></h3></dt>
+            <dt><h3><%= link_to pin.title_of_piece, pin_path(pin) %></h3></dt>
             <dt><%= pin.brand %></dt>
             <dd><%= pin.comment %></dd>
             <br>
             <dd>by <%= pin.user.name if pin.user %></dd>
             <dt><h6><%= pin.created_at.strftime("%b %d, %Y") %></h6></dt></br>
 
-              <% if pin.user == current_user %>
+              <% if current_user && pin.user == current_user %>
                 <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %>
                 <%= link_to 'Delete', pin, class: "btn btn-primary btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></dt>
 

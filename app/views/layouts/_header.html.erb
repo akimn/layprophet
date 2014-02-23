@@ -19,11 +19,18 @@
     
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
+        <%if !user_signed_in? %>
         <li><%= link_to "SIGN UP", new_user_registration_path, class: "btn btn-default btn-xs" %></li>
         <li><%= link_to "PIECES", pieces_path %></li>
         <li><%= link_to "SOCIAL", index_path %></li>
         <li><%= link_to "RANKINGS", rankings_path %></li>
         <li><%= link_to "ABOUT", about_path %></li>
+        <% else %>
+        <li><%= link_to "PIECES", pieces_path %></li>
+        <li><%= link_to "SOCIAL", index_path %></li>
+        <li><%= link_to "RANKINGS", rankings_path %></li>
+        <li><%= link_to "ABOUT", about_path %></li>
+        <% end %>
         <%if user_signed_in? %>
             <li><%= link_to '+ADD', new_pin_path %></li>
             <li><%= link_to "SETTINGS", edit_user_registration_path %></li>
