@@ -19,7 +19,6 @@
             <%= image_tag pin.image.url(:medium) %>
             <dt><h3><%= link_to pin.title_Of_Piece, pin_path(pin) %></h3></dt>
             <dt><%= pin.brand %></dt>
-            <br> <!--pastor_or_worship_leader_name-->
             <dd><%= pin.comment %></dd>
             <br>
             <dd>by <%= pin.user.name if pin.user %></dd>

@@ -6,8 +6,8 @@ class PinsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    #@pins = Pin.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 35, :page => params[:page])
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 50)
+    @pins = Pin.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 35, :page => params[:page])
+    #@pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 50)
   end
 
   def show
@@ -36,16 +36,23 @@ class PinsController < ApplicationController
   end
 
   def update
-    if @pin.update(pin_params)
-      redirect_to @pin, notice: 'Pin was successfully updated.'
-    else
-      render action: 'edit'
+    respond_to do |format|
+      if @pin.update(pin_params)
+        format.html { redirect_to @pin }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @pin.errors, status: :unprocessable_entity }
+      end
     end
   end
 
-def destroy
+  def destroy
     @pin.destroy
-    redirect_to pins_url
+    respond_to do |format|
+      format.html { redirect_to pins_url }
+      format.json { head :no_content }
+    end
   end
 
   private
