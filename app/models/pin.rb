@@ -21,7 +21,7 @@ class Pin < ActiveRecord::Base
 	def self.search(search)
 		
 	  if search	
-      	where('title_Of_Piece ILIKE ? OR "brand" ILIKE ? OR "comment" ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
+      	where('"title_Of_Piece" ILIKE ? OR "brand" ILIKE ? OR "comment" ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
 	  else
 	    scoped
 	  end
