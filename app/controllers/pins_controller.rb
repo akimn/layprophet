@@ -67,11 +67,11 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:image, :title_of_piece, :brand, :comment)
+      params.require(:pin).permit(:image, :title_Of_Piece, :brand, :comment)
     end
 
     def sort_column
-      params[:sort] || "title_of_piece" || "brand" || "comment"
+      params[:sort] || "title_Of_Piece" || "brand" || "comment"
     end
   
     def sort_direction
