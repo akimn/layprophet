@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140223233444) do
 
   create_table "pins", force: true do |t|
-    t.string   "title_of_piece"
+    t.string   "title_Of_Piece"
     t.string   "brand"
     t.string   "comment"
     t.datetime "created_at"
