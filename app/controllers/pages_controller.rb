@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def article1
   end
 
+  def dranpage
+  end
+  
   def rankings
   end
 end

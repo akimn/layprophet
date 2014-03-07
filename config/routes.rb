@@ -10,6 +10,7 @@ Layprophet::Application.routes.draw do
   get "index" => "pins#index"
   get "article1" => "pages#article1"
   get "rankings" => "pages#rankings"
+  get "dranpage" => "pages#dranpage"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
