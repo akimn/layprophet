@@ -19,4 +19,8 @@ class PagesController < ApplicationController
   
   def rankings
   end
+
+  def varini1
+  end
+  
 end
