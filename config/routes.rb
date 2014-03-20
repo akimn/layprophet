@@ -13,6 +13,7 @@ Layprophet::Application.routes.draw do
   get "dranpage" => "pages#dranpage"
   get "varini1" => "pages#varini1"
   get "ox1" => "pages#ox1"
+  get "stikman" => "pages#stikman"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

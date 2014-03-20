@@ -25,4 +25,7 @@ class PagesController < ApplicationController
 
   def ox1
   end
+
+  def stikman
+  end
 end
