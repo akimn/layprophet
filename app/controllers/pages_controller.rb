@@ -22,5 +22,7 @@ class PagesController < ApplicationController
 
   def varini1
   end
-  
+
+  def ox1
+  end
 end
