@@ -24,8 +24,8 @@
             <dd>by <%= pin.user.name if pin.user %></dd>
             <dt><h6><%= pin.created_at.strftime("%b %d, %Y") %></h6></dt></br>
 
-              <% if current_user && pin.user == current_user %>
-                <!--<%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %>-->
+              <% if current_user && (pin.user == current_user) %>
+                <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %>
                 <%= link_to 'Delete', pin, class: "btn btn-primary btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></dt>
 
             <% end %>
@@ -36,5 +36,8 @@
   </div>
 </div>
 
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
 
       <%= will_paginate @pins %>
