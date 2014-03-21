@@ -34,6 +34,9 @@ class PagesController < ApplicationController
 
   def reka
   end
-  
+
+  def ludo
+  end
+
 
 end

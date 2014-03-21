@@ -16,6 +16,7 @@ Layprophet::Application.routes.draw do
   get "stikman" => "pages#stikman"
   get "bumblebee" => "pages#bumblebee"
   get "reka" => "pages#reka"
+  get "ludo" => "pages#ludo"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
