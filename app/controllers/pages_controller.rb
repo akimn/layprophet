@@ -28,4 +28,8 @@ class PagesController < ApplicationController
 
   def stikman
   end
+
+  def bumblebeelovesyou
+  end
+  
 end
