@@ -31,5 +31,9 @@ class PagesController < ApplicationController
 
   def bumblebeelovesyou
   end
+
+  def reka
+  end
   
+
 end
