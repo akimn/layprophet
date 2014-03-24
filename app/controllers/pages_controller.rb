@@ -38,9 +38,11 @@ class PagesController < ApplicationController
   def ludo
   end
 
-  def hera
+  def herakut
   end
-  
+
+  def claudioethos
+  end
 
 
 end
