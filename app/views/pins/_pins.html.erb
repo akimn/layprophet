@@ -6,7 +6,9 @@
 
 <!--"created_at", "Date"-->
 
-
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
 
 <div id="pins" class="transitions-enabled">
 
