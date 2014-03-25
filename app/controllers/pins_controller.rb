@@ -44,23 +44,23 @@ class PinsController < ApplicationController
   end
 
   def update
-    #if @pin.update(pin_params)
-     # redirect_to @pin, notice: 'Pin was successfully updated.'
-    #else
-     # render action: 'edit'
-    #end
-
-
-    respond_to do |format|
-      if @pin.update(pin_params)
-        format.html { redirect_to @pin }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @pin.errors, status: :unprocessable_entity }
-      end
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: 'Pin was successfully updated.'
+    else
+      render action: 'edit'
     end
-  end
+
+
+    #respond_to do |format|
+     # if @pin.update(pin_params)
+      #  format.html { redirect_to @pin }
+       # format.json { head :no_content }
+      #else
+      #  format.html { render action: 'edit' }
+       # format.json { render json: @pin.errors, status: :unprocessable_entity }
+      #end
+    #end
+  #end
 
   def destroy
     @pin.destroy
