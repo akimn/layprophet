@@ -11,3 +11,13 @@ $ ->
     $('#articles').masonry
       itemSelector: '.box'
       isFitWidth: true
+
+	$('#toparticle').imagesLoaded ->
+	    $('#articles').masonry
+	      itemSelector: '.top'
+	      isFitWidth: true
+
+  $('#subarticles').imagesLoaded ->
+    $('#articles').masonry
+      itemSelector: '.midtwo'
+      isFitWidth: true
