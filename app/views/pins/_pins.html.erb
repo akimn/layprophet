@@ -6,9 +6,9 @@
 
 <!--"created_at", "Date"-->
 
-<div class="panel panel-primary"><!---primary was default before-->
+<!--<div class="panel panel-primary">primary was default before-->
 <div id="pins" class="transitions-enabled">
-  <div class="panel panel-default">
+  <!--<div class="panel panel-default">-->
     <% @pins.each do |pin| %>
       <div class="box panel panel-default">
         <div class="actions center">
@@ -32,9 +32,9 @@
       </div>
     <% end %>
   </div>
-</div>
+<!--</div>-->
 
-</div>
+<!--</div>-->
 
 <div class="center">
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
