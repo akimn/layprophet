@@ -13,15 +13,17 @@ $ ->
 	      itemSelector: '.top'
 	      isFitWidth: true
 
+	 $('#articles').imagesLoaded ->
+    $('#articles').masonry
+      itemSelector: '.box'
+      isFitWidth: true
+
   $('#twoarticles').imagesLoaded ->
     $('#twoarticles').masonry
       itemSelector: '.midtwo'
       isFitWidth: true
   
-  $('#articles').imagesLoaded ->
-    $('#articles').masonry
-      itemSelector: '.box'
-      isFitWidth: true
+  
 
       $('#pieces').imagesLoaded ->
     $('#pieces').masonry
