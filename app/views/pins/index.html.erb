@@ -8,16 +8,15 @@
           <%= text_field_tag :search, params[:search] %>
           <%= submit_tag "SEARCH", :name => nil, class: "btn btn-default btn-xs" %>
         </p>
-     </div>
-
-        <%= sortable "created_at", "By Date" %><br>
       </div>
 
+        <%= sortable "created_at", "By Date" %></br>
+      
 
-    <div id="pins">
-        <%= render 'pins' %>
+      <div id="pins">
+          <%= render 'pins' %>
+      </div>  
 
-</div>
   <% end %>
 
 
