@@ -44,5 +44,12 @@ class PagesController < ApplicationController
   def claudioethos
   end
 
+  def dface
+  end
+
+  def pandilla
+  end
+  
+
 
 end
