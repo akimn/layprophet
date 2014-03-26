@@ -8,7 +8,10 @@ $ ->
       isFitWidth: true
 
   
-
+  $('#articles').imagesLoaded ->
+    $('#articles').masonry
+      itemSelector: '.box'
+      isFitWidth: true
 
 	$('#toparticle').imagesLoaded ->
 	  $('#toparticle').masonry
@@ -20,7 +23,3 @@ $ ->
       itemSelector: '.midtwo'
       isFitWidth: true
 
-  $('#articles').imagesLoaded ->
-    $('#articles').masonry
-      itemSelector: '.box'
-      isFitWidth: true
