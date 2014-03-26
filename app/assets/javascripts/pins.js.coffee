@@ -7,19 +7,27 @@ $ ->
       itemSelector: '.box'
       isFitWidth: true
 
-  
-  $('#articles').imagesLoaded ->
-    $('#articles').masonry
-      itemSelector: '.box'
-      isFitWidth: true
 
 	$('#toparticle').imagesLoaded ->
 	  $('#toparticle').masonry
 	      itemSelector: '.top'
 	      isFitWidth: true
 
-  $('#subarticles').imagesLoaded ->
-    $('#subarticles').masonry
+  $('#twoarticles').imagesLoaded ->
+    $('#twoarticles').masonry
       itemSelector: '.midtwo'
       isFitWidth: true
+  
+  $('#articles').imagesLoaded ->
+    $('#articles').masonry
+      itemSelector: '.box'
+      isFitWidth: true
+
+      $('#pieces').imagesLoaded ->
+    $('#pieces').masonry
+      itemSelector: '.box2'
+      isFitWidth: true
+
+
+
 
