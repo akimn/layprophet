@@ -49,6 +49,9 @@ class PagesController < ApplicationController
 
   def pandilla
   end
+
+  def clarionalley
+  end
   
 
 
