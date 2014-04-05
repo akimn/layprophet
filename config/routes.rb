@@ -24,6 +24,7 @@ Layprophet::Application.routes.draw do
   get "mobstr" => "pages#mobstr"
   get "daleast" => "pages#daleast"
   get "clarionalley" => "pages#clarionalley"
+  get "socialpiece" => "pages#socialpiece"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
