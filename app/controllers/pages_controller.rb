@@ -50,8 +50,12 @@ class PagesController < ApplicationController
   def pandilla
   end
 
-  def clarionalley
+  def mobstr
   end
+
+  def daleast
+  end
+  
   
 
 
